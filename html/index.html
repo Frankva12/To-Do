@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bodyApp">
+        <div class="nameApp">
+            <h1>TO-DO LIST</h1>
+        </div>
+        <div class="list hide">
+            <p class="textNote">INGRESE UNA NUEVA NOTA</p>
+
+            <div class="items">
+                <form class="textInsideNote">
+                    <p class="textForm">Ingrese el titulo de la nota</p><input class="inputAlign" type="text">
+                    <p class="textForm">Ingrese la fecha de la nota</p><input class="inputAlign" type="date">
+                    <p class="textForm">Ingrese la hora de la nota</p><input class="inputAlign" type="time">
+                    <p class="textForm">Ingrese la importancia de la nota</p>
+                    <div class="radioButton">
+                        <input type="radio" name="Importance" value="Alta">
+                        <label class="radioButton">Alta</label>
+                        <input type="radio" name="Importance" value="Media">
+                        <label class="radioButton">Media</label>
+                        <input type="radio" name="Importance" value="Baja">
+                        <label class="radioButton">Baja</label>
+                    </div>
+                    <p class="textForm">Ingrese la descripcion de la nota</p><textarea class="inputAlign"
+                        type="text"></textarea>
+                    <input class="button" type="button" value="Guardar">
+                </form>
+            </div>
+        </div>
+
+
+        <div class="list">
+            <p class="textNote">LISTA DE NOTAS</p>
+
+            <div class="note">
+                <p class="titleNote">
+                    Este es el ejemplo 1 de la nota 1 va a ir la fecha hora
+                </p>
+                <p class="descriptionNote">
+                    Esta es la descripcion de la nota
+                </p>
+                <p class="importanceNote">
+                    La importancia de la nota va aqui
+                </p>
+            </div>
+            <div class="note">
+                <p class="titleNote">
+                    Este es el ejemplo 1 de la nota 1 va a ir la fecha hora
+                </p>
+                <p class="descriptionNote">
+                    Esta es la descripcion de la nota
+                </p>
+                <p class="importanceNote">
+                    La importancia de la nota va aqui
+                </p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
