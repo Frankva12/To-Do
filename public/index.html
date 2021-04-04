@@ -38,17 +38,20 @@
                         </svg>
                     </div>
                     <div class="flex space-x-4">
-                        <a href="#edu"
-                            class="text-gray-100 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Agregar Notas</a>
-                        <a href="#tech"
-                            class="text-gray-100 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Notas</a>
+                        <a href=""
+                            class="text-gray-100 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                            id="addNotes">Agregar Notas</a>
+                        <a href=""
+                            class="text-gray-100 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                            id="Notes">Notas</a>
 
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="bg-blue-400 py-12 flex flex-column w-auto">
+
+    <div class="bg-blue-400 py-12 flex flex-column w-auto" id="AddNoteSeccion">
         <div class="bg-white p-10 w-6/12 mx-auto rounded-lg shadow-2xl">
 
             <p class="text-center text-xl font-bold mb-4"> Agregar Notas </p>
@@ -67,44 +70,35 @@
                 </div>
 
                 <div class="flex flex-wrap items-center mb-5">
-                    <label for="name" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Fecha</label>
+                    <label for="date" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Fecha</label>
 
-                    <input type="datetime-local" name="name" id="name"
+                    <input type="datetime-local" name="name" id="date"
                         class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2  focus:text-blue-600">
                 </div>
                 <div class="flex flex-wrap items-center mb-5">
-                    <label for="name"
-                        class="w-20 text-right mr-6 text-gray-500 font-bold">Prioridad</label>
-                    <input type="radio" id="f-option" name="selector"
-                        class="w-10 text-right text-gray-500">
-                    <label for="f-option">Alta</label>
-                    <input type="radio" id="s-option" name="selector"
-                        class=" w-10 text-right text-gray-500">
-                    <label for="s-option">Media</label>
-                    <input type="radio" id="t-option" name="selector"
-                        class="k w-10 text-right text-gray-500">
-                    <label for="t-option">Baja</label>
+                    <label for="priority" class="w-20 text-right mr-6 text-gray-500 font-bold">Prioridad</label>
+                    <input type="radio" id="highPriority" name="priority" value="Alta" class="w-10 text-right text-gray-500">
+                    <label for="highPriority">Alta</label>
+                    <input type="radio" id="mediumPriority" name="priority" value="Media" class=" w-10 text-right text-gray-500">
+                    <label for="mediumPriority">Media</label>
+                    <input type="radio" id="lowPriority" name="priority" value="Baja" class="k w-10 text-right text-gray-500">
+                    <label for="lowPriority">Baja</label>
                 </div>
                 <div class="flex  flex-wrap items-center mb-10">
-                    <label for="description"
+                    <label for="comments"
                         class="inline-block w-20 text-sm text-right mr-6 text-gray-500 font-bold">Comentarios</label>
-                    <textarea name="description" id="description"
+                    <textarea name="comments" id="comments"
                         class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600"> </textarea>
                 </div>
                 <div class="flex  flex-wrap items-center mb-10">
-                    <label for="description"
-                    class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Foto</label>
-                    <label class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
-                        <svg width="2.5em" height="2.5em" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 30L16 16C16 13.7909 17.7909 12 20 12L60 12C62.2091 12 64 13.7909 64 16V30" stroke="#C2CCDE" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M48 43.9997L56.4013 43.9997C59.5401 43.9997 61.0824 40.1785 58.8229 37.9997L43.8005 23.5138C41.7668 21.5527 38.5458 21.5527 36.5121 23.5138L21.4896 37.9997C19.2302 40.1784 20.7725 43.9997 23.9112 43.9997H32L32 61.9997C32 63.1043 32.8955 63.9997 34 63.9997L46 63.9997C47.1046 63.9997 48 63.1043 48 61.9997L48 43.9997Z" stroke="#C2CCDE" stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        <span class="mt-2 text-base leading-normal">Select a file</span>
-                        <input type='file' class="hidden" />
+                    <label for="photo" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Foto</label>
+                   
+                        <input type='text' class="border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600" id="photo" />
                     </label>
                 </div>
                 <div class="text-center ">
-                    <button class="bg-blue-400 py-3 px-8 text-white font-bold hover:shadow-lg ">Submit</button>
+                    <input type="submit" id="submit" value="Agregar"
+                        class="bg-blue-400 py-3 px-8 text-white font-bold hover:shadow-lg "></input>
                 </div>
 
             </form>
@@ -113,60 +107,20 @@
     </div>
 
 
-    <div class="bg-blue-400  flex flex-column w-auto">
-        <div class="bg-white p-10 w-full mx-auto rounded-lg shadow-2xl">
+    <div class="bg-blue-400  flex flex-column w-auto" id="noteViews">
+        <div class="bg-white p-10 w-full mx-auto rounded-lg shadow-2xl" >
 
             <p class="text-center text-xl font-bold mb-3"> Notas </p>
-          
-  <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-    <!--Card 1-->
-    <div class="rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="/mountain.jpg" alt="Mountain">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Mountain</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-      </div>
-    </div>
-    <!--Card 2-->
-    <div class="rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="/river.jpg" alt="River">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">River</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#summer</span>
-      </div>
-    </div>
 
-    <!--Card 3-->
-    <div class="rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="/forest.jpg" alt="Forest">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Forest</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
-      </div>
+            <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5" id="divNotes">
+                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterMax"> Filtrar por prioridad Alta</button>
+                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterMedium"> Filtrar por prioridad Media</button>
+                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterMin"> Filtrar por prioridad Baja</button>
+                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterByDate"> Filtrar por fecha</button>
+                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterByLetters"> Filtrar alfabeticamente</button>
+                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterMaxToMin"> Filtrar por prioridades (mayor a menor)</button>
     </div>
-  </div>
-</div>
 </body>
-<script src=""></script>
+<script src="../controllers/Notes.js"></script>
+
 </html>
