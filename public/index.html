@@ -10,57 +10,163 @@
 </head>
 
 <body>
+    <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-2">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center justify-center ">
+                    <div class="flex items-center">
+                        <svg width="2.5em" height="2.5em" viewBox="0 0 80 80" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.9668 39.3064C24.5921 41.0891 23.44 42.6109 21.8258 43.4552C20.0557 44.381 17.9443 44.381 16.1742 43.4552C14.56 42.611 13.4079 41.0891 13.0332 39.3064L12.9033 38.6883C12.5177 36.8535 12.9315 34.9414 14.0412 33.4301L14.2516 33.1436C15.3615 31.6321 17.1247 30.7392 19 30.7392C20.8753 30.7392 22.6385 31.6321 23.7484 33.1436L23.9588 33.4301C25.0685 34.9414 25.4823 36.8535 25.0967 38.6883L24.9668 39.3064Z"
+                                fill="#C2CCDE" />
+                            <path
+                                d="M8 56.1331C8 57.1641 8.83574 57.9998 9.86667 57.9998H18.594C19.0315 54.3082 20.973 50.9894 23.899 48.7952C20.0068 47.7791 15.8755 47.9944 12.0846 49.4411C9.625 50.3797 8 52.7391 8 55.3717V56.1331Z"
+                                fill="#C2CCDE" />
+                            <path
+                                d="M70.1333 58H61.4061C60.9685 54.3085 59.0272 50.9896 56.1012 48.7954C59.9934 47.7794 64.1246 47.9947 67.9154 49.4413C70.375 50.3799 72 52.7393 72 55.372V56.1333C72 57.1643 71.1643 58 70.1333 58Z"
+                                fill="#C2CCDE" />
+                            <path
+                                d="M55.0332 39.3066C55.4079 41.0893 56.56 42.6112 58.1742 43.4554C59.9443 44.3812 62.0557 44.3812 63.8258 43.4554C65.44 42.6112 66.5921 41.0893 66.9668 39.3066L67.0967 38.6885C67.4823 36.8537 67.0685 34.9416 65.9588 33.4304L65.7484 33.1438C64.6385 31.6323 62.8753 30.7395 61 30.7395C59.1247 30.7395 57.3615 31.6323 56.2516 33.1438L56.0412 33.4304C54.9315 34.9416 54.5177 36.8537 54.9033 38.6885L55.0332 39.3066Z"
+                                fill="#C2CCDE" />
+                            <path
+                                d="M55.8 64H24.2C22.4327 64 21 62.5673 21 60.8V59.5929C21 55.0229 23.8269 50.9293 28.1007 49.3106C35.7678 46.4068 44.2322 46.4068 51.8993 49.3106C56.1731 50.9293 59 55.0229 59 59.5929V60.8C59 62.5673 57.5673 64 55.8 64Z"
+                                fill="#C2CCDE" />
+                            <path
+                                d="M35.1413 39.0779C38.1875 40.6591 41.8125 40.6591 44.8587 39.0779C47.6604 37.6236 49.6633 34.9907 50.3172 31.9025L50.5219 30.936C51.1931 27.7662 50.4742 24.4607 48.5471 21.856L48.2168 21.4096C46.2894 18.8044 43.2407 17.2676 40 17.2676C36.7593 17.2676 33.7106 18.8044 31.7832 21.4096L31.4529 21.856C29.5258 24.4607 28.8069 27.7662 29.4781 30.936L29.6828 31.9025C30.3367 34.9907 32.3396 37.6236 35.1413 39.0779Z"
+                                fill="#C2CCDE" />
+                        </svg>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#edu"
+                            class="text-gray-100 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Agregar Notas</a>
+                        <a href="#tech"
+                            class="text-gray-100 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Notas</a>
 
-    <div class="bg-blue-400 min-h-screen py-32 px-10">
-        <div class="bg-white p-10 md:w-2/3 lg:w-1/2 mx-auto rounded-lg shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-blue-400 py-12 flex flex-column w-auto">
+        <div class="bg-white p-10 w-6/12 mx-auto rounded-lg shadow-2xl">
 
+            <p class="text-center text-xl font-bold mb-4"> Agregar Notas </p>
             <form action="">
-                <div class="flex items-center mb-5">
+                <div class="flex flex-wrap items-center mb-5 ">
                     <label for="name" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Nombre</label>
 
-                    <input type="text" name="name" id="name" placeholder="Ingrese su nombre"
-                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 placeholder-gray-300 focus:text-blue-800">
+                    <input type="text" name="name" id="name"
+                        class="border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600">
                 </div>
-                <div class="flex items-center mb-10">
-                    <label for="description" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Descripción</label>
-                    <textarea name="description" id="description" placeholder="Descripción"
-                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 placeholder-gray-300 focus:text-blue-800">
-                    </textarea>
+                <div class="flex flex-wrap items-center mb-10">
+                    <label for="description"
+                        class="inline-block text-sm w-20 text-right mr-6 text-gray-500 font-bold">Descripción</label>
+                    <textarea name="description" id="description"
+                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600"> </textarea>
                 </div>
 
-                <div class="flex items-center mb-5">
+                <div class="flex flex-wrap items-center mb-5">
                     <label for="name" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Fecha</label>
 
-                    <input type="datetime-local" name="name" id="name" placeholder="Ingrese su nombre"
-                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 placeholder-gray-300 focus:text-blue-800">
+                    <input type="datetime-local" name="name" id="name"
+                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2  focus:text-blue-600">
                 </div>
-                <div class="flex items-center mb-5">
+                <div class="flex flex-wrap items-center mb-5">
                     <label for="name"
-                        class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Prioridad</label>
+                        class="w-20 text-right mr-6 text-gray-500 font-bold">Prioridad</label>
                     <input type="radio" id="f-option" name="selector"
-                        class="inline-block w-10 text-right text-gray-500">
+                        class="w-10 text-right text-gray-500">
                     <label for="f-option">Alta</label>
                     <input type="radio" id="s-option" name="selector"
-                        class="inline-block w-10 text-right text-gray-500">
+                        class=" w-10 text-right text-gray-500">
                     <label for="s-option">Media</label>
                     <input type="radio" id="t-option" name="selector"
-                        class="inline-block w-10 text-right text-gray-500">
+                        class="k w-10 text-right text-gray-500">
                     <label for="t-option">Baja</label>
                 </div>
-                <div class="flex items-center mb-10">
-                    <label for="description" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Comentarios</label>
-                    <textarea name="description" id="description" placeholder="Comentarios"
-                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 placeholder-gray-300 focus:text-blue-800">
-                    </textarea>
+                <div class="flex  flex-wrap items-center mb-10">
+                    <label for="description"
+                        class="inline-block w-20 text-sm text-right mr-6 text-gray-500 font-bold">Comentarios</label>
+                    <textarea name="description" id="description"
+                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600"> </textarea>
                 </div>
-                <div class="text-center">
-                    <button class="bg-blue-400 py-3 px-8 text-white font-bold hover:shadow-lg">Submit</button>
+                <div class="flex  flex-wrap items-center mb-10">
+                    <label for="description"
+                    class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Foto</label>
+                    <label class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+                        <svg width="2.5em" height="2.5em" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 30L16 16C16 13.7909 17.7909 12 20 12L60 12C62.2091 12 64 13.7909 64 16V30" stroke="#C2CCDE" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M48 43.9997L56.4013 43.9997C59.5401 43.9997 61.0824 40.1785 58.8229 37.9997L43.8005 23.5138C41.7668 21.5527 38.5458 21.5527 36.5121 23.5138L21.4896 37.9997C19.2302 40.1784 20.7725 43.9997 23.9112 43.9997H32L32 61.9997C32 63.1043 32.8955 63.9997 34 63.9997L46 63.9997C47.1046 63.9997 48 63.1043 48 61.9997L48 43.9997Z" stroke="#C2CCDE" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        <span class="mt-2 text-base leading-normal">Select a file</span>
+                        <input type='file' class="hidden" />
+                    </label>
+                </div>
+                <div class="text-center ">
+                    <button class="bg-blue-400 py-3 px-8 text-white font-bold hover:shadow-lg ">Submit</button>
                 </div>
 
             </form>
 
         </div>
     </div>
-</body>
 
+
+    <div class="bg-blue-400  flex flex-column w-auto">
+        <div class="bg-white p-10 w-full mx-auto rounded-lg shadow-2xl">
+
+            <p class="text-center text-xl font-bold mb-3"> Notas </p>
+          
+  <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+    <!--Card 1-->
+    <div class="rounded overflow-hidden shadow-lg">
+      <img class="w-full" src="/mountain.jpg" alt="Mountain">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Mountain</div>
+        <p class="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+      </div>
+    </div>
+    <!--Card 2-->
+    <div class="rounded overflow-hidden shadow-lg">
+      <img class="w-full" src="/river.jpg" alt="River">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">River</div>
+        <p class="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#summer</span>
+      </div>
+    </div>
+
+    <!--Card 3-->
+    <div class="rounded overflow-hidden shadow-lg">
+      <img class="w-full" src="/forest.jpg" alt="Forest">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Forest</div>
+        <p class="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src=""></script>
 </html>
