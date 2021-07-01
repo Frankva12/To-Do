@@ -55,25 +55,25 @@
         <div class="bg-white p-10 w-6/12 mx-auto rounded-lg shadow-2xl">
 
             <p class="text-center text-xl font-bold mb-4"> Agregar Notas </p>
-            <form action="">
+            <form action="" >
                 <div class="flex flex-wrap items-center mb-5 ">
                     <label for="name" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Nombre</label>
 
                     <input type="text" name="name" id="name"
-                        class="border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600">
+                        class="border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 "required>
                 </div>
                 <div class="flex flex-wrap items-center mb-10">
                     <label for="description"
                         class="inline-block text-sm w-20 text-right mr-6 text-gray-500 font-bold">Descripción</label>
                     <textarea name="description" id="description"
-                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600"> </textarea>
+                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 "> </textarea>
                 </div>
 
                 <div class="flex flex-wrap items-center mb-5">
                     <label for="date" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Fecha</label>
 
                     <input type="datetime-local" name="name" id="date"
-                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2  focus:text-blue-600">
+                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600">
                 </div>
                 <div class="flex flex-wrap items-center mb-5">
                     <label for="priority" class="w-20 text-right mr-6 text-gray-500 font-bold">Prioridad</label>
@@ -110,15 +110,18 @@
     <div class="bg-blue-400  flex flex-column w-auto" id="noteViews">
         <div class="bg-white p-10 w-full mx-auto rounded-lg shadow-2xl" >
 
-            <p class="text-center text-xl font-bold mb-3"> Notas </p>
-
+            <p class="text-center text-3xl font-bold mb-3"> Notas </p>
+            <p class="text-left text-l font-bold mb-3"> Filtros: </p>
+            <select class="appearance-none bg-gray-200 rounded-md p-1.5" id="filter">
+                <option value="0">Prioridad Alta</option>
+                <option value="1">Prioridad Media</option>
+                <option value="2">Prioridad Baja</option>
+                <option value="3">Alta a baja</option>
+                <option value="4">Baja a alta</option>
+              </select>
+              
             <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5" id="divNotes">
-                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterMax"> Filtrar por prioridad Alta</button>
-                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterMedium"> Filtrar por prioridad Media</button>
-                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterMin"> Filtrar por prioridad Baja</button>
-                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterByDate"> Filtrar por fecha</button>
-                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterByLetters"> Filtrar alfabeticamente</button>
-                <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white" onclick="FilterMaxToMin"> Filtrar por prioridades (mayor a menor)</button>
+            
     </div>
 </body>
 <script src="../controllers/Notes.js"></script>
