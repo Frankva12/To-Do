@@ -10,10 +10,13 @@ const comments = document.querySelector("#comments");
 const photo = document.querySelector("#photo");
 const enviar = document.querySelector("#submit");
 const divNotes = document.querySelector("#divNotes");
-const filter = document.querySelector("#filter")
+const filter = document.querySelector("#filter");
+const validateText = document.querySelectorAll("#validateText");
+const forms = document.querySelectorAll(".forms");
 
 let order = [];
 
+console.log(validateText);
 class Note {
     constructor(name, description, date, priority, comments, photo, filter) {
         this.name = name;
@@ -60,7 +63,12 @@ const clearInput = () => {
     for (let i = 0; i < priority.length; i++) {
         priority[i].checked = false
     }
+    for (let i = 0; i < validateText.length; i++) {
+        validateText[i].className = "hidden";
+        forms[i].className = "border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 forms"
+    }
     alert("Su nota ha sido exitosamente agregada")
+
 };
 
 function RadioInfo(radios) {
@@ -81,14 +89,42 @@ function FilterImportance(text) {
     return number[text]
 }
 
-const validate = (name, description, date, comments, photo) => {
-    return name.trim() && description.trim() && date.trim() && comments.trim() && photo.trim();
+const validate = (nameValue, descriptionValue, dateValue, commentsValue, photoValue) => {
+    if (nameValue == "") {
+        validateTexting(0, "nombre");
+        name.className = "border-b-2 border-red-500 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 border-red-500";
+    }
+    if (descriptionValue == "") {
+        validateTexting(1, "descripcion");
+        description.className = "border-b-2 border-red-500 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600";
+    }
+    if (dateValue == "") {
+        validateTexting(2, "fecha");
+        date.className = "border-b-2 border-red-500 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 border-red-500";
+    }
+    if (commentsValue == "") {
+        validateTexting(3, "comentario");
+        comments.className = "border-b-2 border-red-500 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 border-red-500";
+    }
+    if (photoValue == "") {
+        validateTexting(4, "foto");
+        photo.className = "border-b-2 border-red-500 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 border-red-500";
+    }
+    return nameValue.trim() && descriptionValue.trim() && dateValue.trim() && commentsValue.trim() && photoValue.trim();
 };
+
+function validateTexting(number, message) {
+    validateText[number].className = "text-red-500 text-xs font-bold inline-block w-auto text-center flex justify-center pb-4";
+    validateText[number].innerHTML = `Por favor ingrese su ${message}`;
+}
 
 enviar.addEventListener("click", (e) => {
     e.preventDefault();
+    importance = RadioInfo(priority);
     if (validate(name.value, description.value, date.value, comments.value, photo.value)) {
-        importance = RadioInfo(priority);
+        if (importance == null) {
+            alert("Ingrese la importancia de su nota");
+        }
         numero = FilterImportance(importance)
         const note = new Note(
             name.value,
@@ -106,11 +142,7 @@ enviar.addEventListener("click", (e) => {
         filterNotes(filter.value);
         clearInput();
     } else {
-        name.className = "border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 border-red-500";
-        description.className = "border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 border-red-500";
-        date.className = "border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 border-red-500";
-        comments.className = "border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 border-red-500";
-        photo.className = "border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 border-red-500";
+
     }
 });
 
@@ -137,7 +169,6 @@ notas.addEventListener("click", (e) => {
 })
 
 function filterNotes(valor) {
-
     let opcion = {
         "0": () => {
             let orderImportance = [];

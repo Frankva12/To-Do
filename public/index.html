@@ -60,42 +60,55 @@
                     <label for="name" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Nombre</label>
 
                     <input type="text" name="name" id="name"
-                        class="border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 "required>
+                        class="border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 forms"
+                        required>
+                       
                 </div>
+                <p class="hidden" id="validateText">Please choose a password.</p>
                 <div class="flex flex-wrap items-center mb-10">
                     <label for="description"
-                        class="inline-block text-sm w-20 text-right mr-6 text-gray-500 font-bold">Descripción</label>
+                        class="inline-block text-sm w-20 text-right mr-6 text-gray-500 font-bold border-red-500">Descripción</label>
                     <textarea name="description" id="description"
-                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 "> </textarea>
+                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 forms"></textarea>  
                 </div>
-
+                
+                <p class="text-red-500 text-xs font-bold inline-block w-auto text-center flex justify-center hidden" id="validateText">Please choose a password.</p>
                 <div class="flex flex-wrap items-center mb-5">
                     <label for="date" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Fecha</label>
-
                     <input type="datetime-local" name="name" id="date"
-                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600">
+                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 forms" >
                 </div>
+                <p class="hidden" id="validateText">Please choose a password.</p>
+                
                 <div class="flex flex-wrap items-center mb-5">
                     <label for="priority" class="w-20 text-right mr-6 text-gray-500 font-bold">Prioridad</label>
-                    <input type="radio" id="highPriority" name="priority" value="Alta" class="w-10 text-right text-gray-500">
+                    <input type="radio" id="highPriority" name="priority" value="Alta"
+                        class="w-10 text-right text-gray-500">
                     <label for="highPriority">Alta</label>
-                    <input type="radio" id="mediumPriority" name="priority" value="Media" class=" w-10 text-right text-gray-500">
+                    <input type="radio" id="mediumPriority" name="priority" value="Media"
+                        class=" w-10 text-right text-gray-500">
                     <label for="mediumPriority">Media</label>
-                    <input type="radio" id="lowPriority" name="priority" value="Baja" class="k w-10 text-right text-gray-500">
+                    <input type="radio" id="lowPriority" name="priority" value="Baja"
+                        class="k w-10 text-right text-gray-500">
                     <label for="lowPriority">Baja</label>
                 </div>
-                <div class="flex  flex-wrap items-center mb-10">
+                <div class="flex flex-wrap items-center mb-10">
                     <label for="comments"
-                        class="inline-block w-20 text-sm text-right mr-6 text-gray-500 font-bold">Comentarios</label>
+                        class="inline-block w-20 text-sm text-right mr-6 text-gray-500 font-bold ">Comentarios</label>
                     <textarea name="comments" id="comments"
-                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600"> </textarea>
+                        class="border-b-2 border-gray-400 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 forms"></textarea>
                 </div>
+                <p class="hidden" id="validateText">Please choose a password.</p>
                 <div class="flex  flex-wrap items-center mb-10">
                     <label for="photo" class="inline-block w-20 text-right mr-6 text-gray-500 font-bold">Foto</label>
-                   
-                        <input type='text' class="border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600" id="photo" />
+
+                    <input type='text'
+                        class="border-b-2 border-gray-400 w-6/12 outline-none focus:border-blue-500 flex-1 py-2 focus:text-blue-600 forms"
+                        id="photo" required>
                     </label>
-                </div>
+              </div>
+              <p class="hidden" id="validateText">Please choose a password.</p>
+                
                 <div class="text-center ">
                     <input type="submit" id="submit" value="Agregar"
                         class="bg-blue-400 py-3 px-8 text-white font-bold hover:shadow-lg "></input>
@@ -108,7 +121,7 @@
 
 
     <div class="bg-blue-400  flex flex-column w-auto" id="noteViews">
-        <div class="bg-white p-10 w-full mx-auto rounded-lg shadow-2xl" >
+        <div class="bg-white p-10 w-full mx-auto rounded-lg shadow-2xl">
 
             <p class="text-center text-3xl font-bold mb-3"> Notas </p>
             <p class="text-left text-l font-bold mb-3"> Filtros: </p>
@@ -118,11 +131,12 @@
                 <option value="2">Prioridad Baja</option>
                 <option value="3">Alta a baja</option>
                 <option value="4">Baja a alta</option>
-              </select>
-              
-            <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5" id="divNotes">
-            
-    </div>
+            </select>
+
+            <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5"
+                id="divNotes">
+
+            </div>
 </body>
 <script src="../controllers/Notes.js"></script>
 
